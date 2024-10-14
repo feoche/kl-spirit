@@ -1,0 +1,35 @@
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to right, #203550 0%, #335272 38%, #335272 62%, #203550);
+  padding: 0 1rem;
+}
+
+.tab {
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+  font-family: "Playwrite GB S", cursive;
+  color: white;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.tab:hover {
+  background-color: #22334c;
+}
+
+.tab.active {
+  border-bottom: 5px solid #f4f4f4;
+}
+
+.tab-content {
+  display: none;
+  padding: 3rem;
+}
+
+.tab-content.active {
+  display: flex;
+  min-height: 100vh;
+}

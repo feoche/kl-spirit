@@ -6,83 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <section class="hero">
   <img id="avatar"
        src="img/kristell-leroy.png"
-       alt="Kristell Leroy">
+       title="Kristell Leroy">
   <h1>Kristell Leroy</h1>
 
   <h2 class="animated-span">
-    <span class="static">O</span><span class="dynamic" id="o-words">
-        <span class="word active">ffice</span>
-        <span class="word">riginalité</span>
-        <span class="word">pportunité</span>
-    </span>
-    <span class="static">&nbsp;M</span><span class="dynamic" id="m-words">
-        <span class="word active">anager</span>
-        <span class="word">otivation</span>
-        <span class="word">émoire</span>
+    <span class="static-letters">
+      O<span class="dynamic-container">
+        <span id="dynamic-word-o"></span>
+      </span>
+      M<span class="dynamic-container">
+        <span id="dynamic-word-m"></span>
+      </span>
     </span>
   </h2>
-
-  <style>
-    .animated-span {
-      font-size: 2.5em;
-      font-weight: bold;
-    }
-
-    .dynamic {
-      display: inline-block;
-      overflow: hidden;
-      vertical-align: bottom;
-      height: 1.4em;
-      width: 10ch;
-    }
-
-    #o-words, #m-words {
-      position: relative;
-    }
-
-    .word {
-      position: absolute;
-      left: 0;
-      opacity: 0;
-      transform: translateY(100%);
-      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    }
-
-    .word.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-
-  <script>
-    const oWords = document.querySelectorAll('#o-words .word');
-    const mWords = document.querySelectorAll('#m-words .word');
-
-    let oIndex = 0;
-    let mIndex = 0;
-
-    function changeWord(words, index) {
-      words[index].classList.remove('active');
-      index = (index + 1) % words.length;
-      words[index].classList.add('active');
-      return index;
-    }
-
-    setInterval(() => {
-      oIndex = changeWord(oWords, oIndex);
-      mIndex = changeWord(mWords, mIndex);
-    }, 5000); // Change word every 5 seconds
-  </script>
 </section>
 
 <div class="tabs">
@@ -100,18 +48,69 @@
 </div>
 
 <div class="tab-content" id="ovh">
-  <h2>Ses Réalisations chez OVH</h2>
-  <p>Texte sur ses compétences acquises et ses réalisations chez OVH.</p>
+  <h2>Wall of fame</h2>
+  <dl>
+    <dt>31 Octobre 2024</dt>
+    <dd>KrisFest</dd>
+  </dl>
+  <dl>
+    <dt>Octobre 2024</dt>
+    <dd>Hackathon</dd>
+  </dl>
+  <dl>
+    <dt>Juin 2024</dt>
+    <dd>OVHcloud Summer Fest</dd>
+  </dl>
+  <dl>
+    <dt>Décembre 2023</dt>
+    <dd>Soirée de Noël - Olympic Games</dd>
+  </dl>
+  <dl>
+    <dt>Juin 2023</dt>
+    <dd><strike>OVHcloud</strike> Madly Fest</dd>
+  </dl>
+  <dl>
+    <dt>Mai 2023</dt>
+    <dd>Barbeuc party</dd>
+  </dl>
+  <dl>
+    <dt>Décembre 2022</dt>
+    <dd>Soirée de Noël - Team Fight !</dd>
+  </dl>
+  <dl>
+    <dt>Décembre 2021</dt>
+    <dd>Soirée de Noël - Team Fight !</dd>
+  </dl>
+  <dl>
+    <dt>Décembre 2019</dt>
+    <dd>Soirée de Noël - Gatsby Party</dd>
+  </dl>
+  <dl>
+    <dt>Décembre 2018</dt>
+    <dd>Soirée de Noël - La soirée des couleurs</dd>
+  </dl>
+  <dl>
+    <dt>Décembre 2017</dt>
+    <dd>Soirée de Noël - Scarabée Jaune</dd>
+  </dl>
+  <p>
+  ...Et autres soirées improvisées, karaokés, soirées jeux, ou juste boire un coup !<br/><br/>
+  Et n'oublions pas toutes ces idées, ces décors, ces événements, ces liens que l'on a pu tisser; c'est ça, le <strong>KL Spirit</strong> !
+  </p>
 </div>
 
 <div class="tab-content" id="lieux">
   <h2>Lieux Préférés</h2>
-  <p>Carte montrant ses lieux préférés, comme l'Italie et la Côte de granit rose.</p>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59332.68209185979!2d8.84852797222163!3d45.89797402756373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786cbb987476e6f%3A0x7ab08a8cb1b16a58!2sLac%20Majeur!5e0!3m2!1sfr!2sfr!4v1697298830844!5m2!1sfr!2sfr"
-          allowfullscreen=""></iframe>
-  <p>Carte de la Côte de Granit Rose :</p>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54618.43032230592!2d-3.491191824570405!3d48.83218215453283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48117b08c8cf48a1%3A0x292a4b9c7e33d2c1!2sC%C3%B4te%20de%20Granit%20Rose!5e0!3m2!1sfr!2sfr!4v1697298968896!5m2!1sfr!2sfr"
-          allowfullscreen=""></iframe>
+  <div id="places">
+    <img src="img/places/cinque_terre.avif" title="Cinque Terre">
+    <img src="img/places/sicilia.jpg" title="Sicile">
+    <img src="img/places/swiss.avif" title="Suisse">
+    <img src="img/places/como_lake.jpg" title="Lac de Côme">
+    <img src="img/places/castel_meur.jpg" title="Castel Meur">
+    <img src="img/places/beg_douar.jpg" title="Beg Douar">
+    <img src="img/places/plougrescant.avif" title="Plougrescant">
+    <img src="img/places/concert.avif" title="Concert">
+  </div>
 </div>
 
 <div class="tab-content" id="hobbies">
@@ -120,13 +119,15 @@
 </div>
 
 <div class="tab-content" id="contribution">
-  <h2>Contributions & Commentaires</h2>
-  <p>Ici, chacun peut venir raconter des anecdotes ou laisser un message.</p>
-  <form action="/submit-comment" method="post">
-    <label for="comment">Votre commentaire :</label>
-    <textarea id="comment" name="comment"></textarea>
-    <input type="submit" value="Soumettre">
-  </form>
+  <h2>Contributions</h2>
+  <p>Découvrez l'album de contributions sur Google Photos :</p>
+  <a href="https://photos.app.goo.gl/iKPBiCKxbQZ67bVW8">
+    <img src="img/contribute.jpg" title="Contributions">
+  </a>
+  <h2>Livre d'or</h2>
+  <blockquote id="quote">
+    Ici, chacun peut venir raconter des anecdotes ou laisser un message.
+  </blockquote>
 </div>
 
 <div class="tab-content" id="minutrit">
