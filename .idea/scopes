@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DependencyValidationManager">
+    <scope name="Global" pattern="!file:.*//*&amp;&amp;!file:*/bower_components//*&amp;&amp;!file:*/node_modules//**" />
+  </component>
+</project>
