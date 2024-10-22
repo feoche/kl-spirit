@@ -14,18 +14,31 @@ tabs.forEach(tab => {
   });
 });
 
-const oWords = ["ffice", "pératrice de", "rganisatrice", "ptimisatrice de", "racle", "rchestratrice de", "mnisciente", "ptimiste", "pportuniste", "rganisatrice de"];
-const mWords = ["anager", "iracles", "agistral", "éthodes", "ultitâche", "aîtrise", "odératrice", "otivante", "aline", "erveilles"];
-let currentIndexO = 0;
-let currentIndexM = 0;
+const words = [
+  ["Office", "Manager"],
+  ["Organisatrice de", "Merveilles"],
+  ["Opératrice de", "Miracles"],
+  ["Orchestratrice", "Multitâche"],
+  ["Organisée et", "Maline"],
+  ["Omnisciente", "Modératrice"],
+  ["Obstinée et", "Motivée"],
+  ["Optimiste", "Motivante"],
+  ["Originale et", "Malicieuse"],
+  ["Officielle", "Maîtresse de cérémonie"],
+  ["Ostréiculture et", "Musique"],
+  ["Oeil-de-lynx", "Méticuleuse"],
+  ["Organisée et", "Modeste"],
+  ["Oeuvres", "Mémorables"]
+]
+let currentIndex = 0;
 const dynamicWordSpanO = document.getElementById('dynamic-word-o');
 const dynamicWordSpanM = document.getElementById('dynamic-word-m');
 const dynamicContainer = document.querySelectorAll('.dynamic-container');
 
 function changeWord() {
   // Set the new word
-  dynamicWordSpanO.textContent = oWords[currentIndexO];
-  dynamicWordSpanM.textContent = mWords[currentIndexM];
+  dynamicWordSpanO.textContent = words[currentIndex][0].substring(1);
+  dynamicWordSpanM.textContent = words[currentIndex][1].substring(1);
 
   // Show the word
   dynamicContainer.forEach(container => container.classList.add('show'));
@@ -35,8 +48,7 @@ function changeWord() {
     dynamicContainer.forEach(container => container.classList.remove('show'));
 
     // Change to the next word in the array after hiding
-    currentIndexO = (currentIndexO + 1) % oWords.length;
-    currentIndexM = (currentIndexM + 1) % mWords.length;
+    currentIndex = (currentIndex + 1) % words.length;
   }, 5000);
 }
 
