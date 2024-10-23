@@ -125,7 +125,7 @@ body {
   flex-flow: column;
   align-items: center;
   background: beige;
-  gap: 2rem;
+  gap: 1.5rem;
 
   & h2 {
     font-family: Pacifico, sans-serif;
@@ -135,7 +135,25 @@ body {
   }
 }
 
+#enfance {
+  font-family: "Playwrite GB S", cursive;
+
+  & img {
+    max-width: 500px;
+  }
+
+  & ul {
+    padding: 0 30%;
+  }
+
+  & li {
+    padding: .5rem 0;
+  }
+}
+
 #ovh {
+  font-family: "Playwrite GB S", cursive;
+
   & ol {
     margin: 0;
     list-style: none;
@@ -391,6 +409,8 @@ body {
 }
 
 #contribution {
+  font-family: "Playwrite GB S", cursive;
+
   & img {
     display: block;
     max-width: 70%;
@@ -398,7 +418,12 @@ body {
   }
 }
 
+#minutrit {
+  font-family: "Playwrite GB S", cursive;
+}
+
 footer {
+  font-family: "Playwrite GB S", cursive;
   background-color: #22334c;
   color: white;
   text-align: center;
