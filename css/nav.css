@@ -3,6 +3,7 @@
   justify-content: space-around;
   background: linear-gradient(to right, #203550 0%, #335272 38%, #335272 62%, #203550);
   padding: 0 1rem;
+  margin-top: -1rem;
 }
 
 .tab {

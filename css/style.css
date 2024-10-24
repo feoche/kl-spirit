@@ -48,7 +48,7 @@ body {
     font-size: 5rem;
     margin: 2rem 0 0;
 
-    --ratio: 3;
+    --ratio: 1;
     text-shadow:
       0 0 2px rgba(0, 0, 0, 0.65),
       0 0 calc(1px * var(--ratio)) #fff6eb,
@@ -109,6 +109,7 @@ body {
   transition: max-width 1s ease-in-out, opacity 1s ease-in-out;
   line-height: 3.5rem;
   font-weight: 300;
+  margin-top: 0;
 
   &.show {
     max-width: 300px;
@@ -408,6 +409,12 @@ body {
   }
 }
 
+#song {
+  background: #001c55;
+  color: white;
+  font-size: 2rem;
+}
+
 #contribution {
   font-family: "Playwrite GB S", cursive;
 
@@ -418,6 +425,7 @@ body {
   }
 }
 
+#song,
 #minutrit {
   font-family: "Playwrite GB S", cursive;
 }
